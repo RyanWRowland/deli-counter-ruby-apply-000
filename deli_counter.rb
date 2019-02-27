@@ -7,7 +7,7 @@ def line(line)
     count = 1
     output = ""
     line.each do |person|
-      output = "#{output} #{count}. #{person}"
+      output += " #{count}. #{person}"
       count += 1
     end
     puts "The line is currently:#{output}"
@@ -15,12 +15,8 @@ def line(line)
 end
 
 def take_a_number(line, person)
-  count = 1
-  line.each do
-    count += 1
-  end
   line << person
-  puts "Welcome, #{person}. You are number #{count} in line."
+  puts "Welcome, #{person}. You are number #{line.length} in line."
 end
 
 def now_serving(line)
